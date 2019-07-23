@@ -39,6 +39,7 @@ _Boundary conditions for TOP and BOTTOM:
 SPEED = FREE SLIP / NO SLIP (NO SLIP default mode).
 
 TEMPERATURE = Dirichelet conditions (FIXED VALUES) or Neumann conditions (FLUX / NO FLUX) are available.
+(if you want to use FIXED FLUX, define both Dirichelet AND Neumann conditions!)
 
 _Pressure = a mean pressure gradient is defined. 
 
@@ -152,21 +153,17 @@ _prof : extracts vertical temperature profiles and save it in a file (*.prf).
 
 Usage: ./prof t 2000
 
-_profvar : extracts variance value and save it in a file (*.var).
-
-Usage: ./profvar u 2000
-
 _sectionh/sectionv : extracts horizontal and vertical slices.
 
 Usage: ./sectionv t 96 2000 (component=t, vertical section at y=96, step=2000).
 
-Usage: ./sectionh w 15 400 (component=w, horizontal section at y=15, step=400)
+Usage: ./sectionh w 15 400 (component=w, horizontal section at z=15, step=400)
 
 _spectrumh : compute horizontal spectrum (for a specified component) and save it in a file (*.spe).
 
-Usage: ./spectrumh u 50 4000 (component=u, y=50, step=4000)
+Usage: ./spectrumh u 50 4000 (component=u, z=50, step=4000)
 
-_nusselt : shows the nusselt number  Nu = 1 + <wT>(is this the assumed formula?) to estimates heat flux.
+_nusselt : shows the nusselt number  Nu = 1 + <wT> to estimates heat flux.
 
 Usage: ./nusselt 2000 (nusselt step=2000)
 
